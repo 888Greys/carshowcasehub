@@ -2,14 +2,13 @@
 
 import { useState } from "react";
 
-import SearchManufucturer from "./SearchManufacturer";
+import {SearchManufucturer} from "./";
 import { manufacturers } from "@/constants";
 
 
 const SearchBar = () => {
 
-    const [manufacturers, setManufacturer] = 
-    useState("");
+    const [manufacturers, setManufacturer] = useState("");
     
     const handleSearch = () => {}
     return (
