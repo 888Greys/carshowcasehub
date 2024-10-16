@@ -1,6 +1,7 @@
-"use client";
+import { searchmanufacturerProps } from "@/types";
 
-const SearchManufucturer = () => {
+
+const SearchManufucturer = ({manufacturer, setManufacturer}: searchmanufacturerProps) => {
     return (
         <div>SearchManufacturer</div>
     )
