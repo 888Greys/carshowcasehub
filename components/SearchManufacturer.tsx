@@ -10,7 +10,8 @@ import { manufacturers } from "@/constants";
 const SearchManufucturer = ({manufacturer, setManufacturer}: searchmanufacturerProps) => {
 
     const [query, setQuery] = useState("");
-    
+    const [isShowing, setIsShowing] = useState(true);
+
     const filteredManufucturers = 
         query === ""
         ? manufacturers
@@ -19,8 +20,6 @@ const SearchManufucturer = ({manufacturer, setManufacturer}: searchmanufacturerP
             .replace(/\s+/g, "")
             .includes(query.toLowerCase().replace(/\s+/g, ""))))
         
-
-
     return (
         <div className="search-manufucturer">
             <Combobox>
@@ -45,12 +44,7 @@ const SearchManufucturer = ({manufacturer, setManufacturer}: searchmanufacturerP
             </Combobox>
             <Transition
                 as={Fragment}
-                leave="transition ease-in duration-100"
-                leaveFrom="opacity-100"
-                leaveTo="opacity-0"
-                afterLeave={() => setQuery("")}
-                > 
-
+                show={isShowing}>
 
             </Transition>
         </div>
