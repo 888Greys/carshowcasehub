@@ -1,3 +1,5 @@
+"use client";
+
 const CustomFilter = () => {
     return (
         <div>CustomFilter</div>
